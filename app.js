@@ -48,11 +48,9 @@ app.post("/checkbox",function(req, res){
 
 app.post("/",function(req, res){
   var item = req.body.newItem;
+  if(item != ""){
+      items.push(item);
+      res.redirect("/")
+  }
 
-  items.push(item);
-
-
-
-
-  res.redirect("/");
 });

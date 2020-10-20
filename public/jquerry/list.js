@@ -12,9 +12,8 @@ function aparecer() {
 
   chklista.forEach((item, i) => {
         $("#"+item+"").show();
-        if(item === ""){
-          $("#"+item+"").show();
-        }
+
+
 
 
   });
@@ -23,6 +22,7 @@ function aparecer() {
 
     }else{
       $("#"+item+"").hide();
+
     }
   });
 
