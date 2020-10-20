@@ -36,7 +36,7 @@ app.get("/", function(req, res) {
 
 });
 app.post("/checkbox",function(req, res){
-  var item = req.body.checkbox;
+  var item = req.body.btn;
 
   items.splice(items.indexOf(item),1);
 
