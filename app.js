@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 var items = [];
+var exc = [];
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -34,10 +35,24 @@ app.get("/", function(req, res) {
 
 
 });
+app.post("/checkbox",function(req, res){
+  var item = req.body.checkbox;
+
+  items.splice(items.indexOf(item),1);
+
+
+  res.redirect("/");
+});
+
+
 
 app.post("/",function(req, res){
   var item = req.body.newItem;
+
   items.push(item);
+
+
+
 
   res.redirect("/");
 });

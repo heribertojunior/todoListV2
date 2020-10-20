@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>To do List</title>
     <link rel="stylesheet" href="css/styles.css">
+
   </head>
   <body>
 
@@ -12,25 +13,26 @@
     </div>
 
     <div class="box">
-
+        <form  action="/checkbox" method="post" >
         <% itemList.forEach((itemList, i) => {%>
         <div class="item">
 
-          <input type="checkbox" >
+          <input type="checkbox" name="checkbox" value=<%= itemList %>" onchange="this.form.submit()">
          <p><%= itemList %></p>
 
         </div>
         <%   }); %>
 
+        </form>
 
-
-    <form  action="/" method="post" class="item">
+      <form  action="/" method="post" class="item">
       <input type="text" name="newItem"  placeholder="New Item" >
       <button type="submit" name="button" >+</button>
-    </form>
+   </form>
  </div>
 
   </body>
+
   <footer>
       @SlothFactory production.
   </footer>
