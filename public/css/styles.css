@@ -55,7 +55,19 @@ form {
   text-align: center;
   margin-left: 20px;
 }
+.ls{
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #45ca9f;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+  margin-left: 215px;
 
+}
 button {
   min-height: 50px;
   width: 50px;

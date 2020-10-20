@@ -17,10 +17,11 @@
         <% itemList.forEach((itemList, i) => {%>
         <div class="item">
 
-          <input type="checkbox" name="checkbox" value=<%= itemList %>" onchange="this.form.submit()">
-         <p><%= itemList %></p>
-
+          <input type="checkbox" name="checkbox"  value="<%= itemList %>"  onchange="aparecer()">
+         <p id=text><%= itemList %></p>
+         <button type="submit" id="<%= itemList %>" class="ls">-</button>
         </div>
+
         <%   }); %>
 
         </form>
@@ -30,7 +31,8 @@
       <button type="submit" name="button" >+</button>
    </form>
  </div>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="jquerry/list.js" charset="utf-8"></script>
   </body>
 
   <footer>
